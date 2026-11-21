@@ -1,0 +1,52 @@
+{
+  "harness_controls": [
+    "validate_input",
+    "blind",
+    "refuse",
+    "log",
+    "escalate"
+  ],
+  "format_problems": [],
+  "entries": [
+    {
+      "control": "validate_input",
+      "principle": "Safety and security",
+      "principle_source": "UNESCO Recommendation on the Ethics of Artificial Intelligence (2021), Principle 27",
+      "instrument": "Law of the Republic of Kazakhstan No. 230-VIII of 17 November 2025 On Artificial Intelligence",
+      "provision": "Article 18, paragraphs 1 and 2",
+      "why_here": "Part 1 used valid profiles, so this control adds protection against invalid values that were not tested in the baseline."
+    },
+    {
+      "control": "blind",
+      "principle": "Fairness and non-discrimination",
+      "principle_source": "UNESCO Recommendation on the Ethics of Artificial Intelligence (2021), Principles 28 and 29",
+      "instrument": "Law of the Republic of Kazakhstan No. 230-VIII of 17 November 2025 On Artificial Intelligence",
+      "provision": "Article 6",
+      "why_here": "Part 1 found 5% name-language flips, 10% gender flips and a 2.5% university flip rate, so hiding names and universities reduces the influence of these attributes; the law requires fairness but does not specifically require blinding."
+    },
+    {
+      "control": "refuse",
+      "principle": "Proportionality and Do No Harm",
+      "principle_source": "UNESCO Recommendation on the Ethics of Artificial Intelligence (2021), Principles 25 and 26",
+      "instrument": "Law of the Republic of Kazakhstan No. 230-VIII of 17 November 2025 On Artificial Intelligence; Law No. 94-V of 21 May 2013 On Personal Data and Their Protection",
+      "provision": "Artificial Intelligence Law, Article 6; Personal Data Law, Articles 7(1) and 7(8)",
+      "why_here": "Part 1 tested ordinary valid applications only, so this control adds protection against prohibited purposes, minors, missing consent and suspicious instructions."
+    },
+    {
+      "control": "log",
+      "principle": "Responsibility and accountability",
+      "principle_source": "UNESCO Recommendation on the Ethics of Artificial Intelligence (2021), Principles 42 and 43",
+      "instrument": "Law of the Republic of Kazakhstan No. 230-VIII of 17 November 2025 On Artificial Intelligence",
+      "provision": "Articles 8(1) and 15(2)(3)",
+      "why_here": "Part 1 found differences in scores and decisions, so a decision log is needed to make model outputs and control actions traceable and auditable."
+    },
+    {
+      "control": "escalate",
+      "principle": "Human oversight and determination",
+      "principle_source": "UNESCO Recommendation on the Ethics of Artificial Intelligence (2021), Principles 35 and 36",
+      "instrument": "Law of the Republic of Kazakhstan No. 230-VIII of 17 November 2025 On Artificial Intelligence",
+      "provision": "Articles 7(2) and 8(1)",
+      "why_here": "Part 1 did not establish clear decision bias, but it found score differences and small flip rates, so borderline cases should receive human review."
+    }
+  ]
+}
